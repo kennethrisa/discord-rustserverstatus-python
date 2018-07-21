@@ -27,7 +27,7 @@ apiSite = 2
 apiUrl = https://rust-servers.net/api/?object=servers&element=detail&key=
 ```
 * token = Your bot token from discord.
-* apiSite: To use rust-servers.info, set apiSite = 1, rust-servers.net, set apiSite = 2 in config.
+* apiSite: To use rust-servers.info, set apiSite = 1, rust-servers.net, set apiSite = 2.
 * apiUrl: Use full url, for rust-servers.info: example: https://api.rust-servers.info/status/<your id> and rust-servers.net: https://rust-servers.net/api/?object=servers&element=detail&key={ServerKey}
 * Client secret is used to invite the bot to your server. Token is used for the bot to connect to discord.
 

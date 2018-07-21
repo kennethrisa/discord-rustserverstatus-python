@@ -31,10 +31,7 @@ try:
         counter = 0
         while not client.is_closed:
             counter += 1
-            print('ready')
             if apiSite == '1':
-                print('Api site 1')
-                print('updated')
                 url = apiUrl
                 resp = requests.get(url=url)
                 try:
@@ -50,8 +47,6 @@ try:
                 except Exception as e:
                     print(e)
             if apiSite == '2':
-                print('Api site 2')
-                print('updated')
                 url = apiUrl
                 resp = requests.get(url=url)
                 try:
