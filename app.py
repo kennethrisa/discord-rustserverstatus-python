@@ -39,7 +39,6 @@ try:
                             raise print("Expected status code 200, but got {}")
                     else:    
                         data = resp.json()
-                        name = data['name']
                         players = data['players']
                         maxPlayers = data['players_max']
                         game = discord.Game(type=0, name=players + " / " + maxPlayers)
@@ -54,7 +53,6 @@ try:
                             raise print("Expected status code 200, but got {}")
                     else:    
                         data = resp.json()
-                        name = data['name']
                         players = data['players']
                         maxPlayers = data['maxplayers']
                         game = discord.Game(type=0, name=players + " / " + maxPlayers)
