@@ -4,11 +4,11 @@
 
 Updates activity status on discord bot and displays how many players are connect to your rust server from rest api
 
-Written in Python and requires version 3.4 or 3.6 else you will get errors.
+Written in Python and requires version 3.8^ else you will get errors.
 
 * Support rust-servers.info
 * Support rust-servers.net
-* Bot update status every 6 minutes
+* Bot update status every 3 minutes
 
 # Configuration
 config.ini
@@ -36,7 +36,7 @@ apiUrl = https://rust-servers.net/api/?object=servers&element=detail&key=
 Download it as zip or use:
 git clone https://github.com/kennethrisa/discord-rustserverstatus-python.git
 run command to install dependencies:
-pip install discord.py asyncio requests configparser
+pip install -r requirements.txt
 ```
 
 edit config.ini file with correct parameters

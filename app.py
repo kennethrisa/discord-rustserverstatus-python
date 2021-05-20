@@ -16,21 +16,21 @@ apiSite = BOT['apiSite']
 apiUrl = BOT['apiUrl']
 
 # updateInSec
-updateInterval = 360
+updateInterval = 180
 
 client = discord.Client()
 
 # Print the starting text
 print('---------------')
-print('Discord Bot updates activity status every 6 min')
+print('Discord Bot updates activity status every 3 min')
 print('---------------')
 print('Starting Bot...')
 
 try:
-    async def updateStatusPresence():
+    async def updateStatusPresence():        
         await client.wait_until_ready()
         counter = 0
-        while not client.is_closed:
+        while not client.is_closed():
             counter += 1
             if apiSite == '1':
                 url = apiUrl
@@ -41,8 +41,9 @@ try:
                     data = resp.json()
                     players = data['players']
                     maxPlayers = data['players_max']
-                    game = discord.Game(type=0, name=players + " / " + maxPlayers)
-                    await client.change_presence(game=game)
+                    game = discord.Game(name=players + " / " + maxPlayers)
+                    await client.change_presence(status=discord.Status.idle, activity=game)
+
             if apiSite == '2':
                 url = apiUrl
                 resp = requests.get(url=url)
@@ -52,8 +53,9 @@ try:
                     data = resp.json()
                     players = data['players']
                     maxPlayers = data['maxplayers']
-                    game = discord.Game(type=0, name=players + " / " + maxPlayers)
-                    await client.change_presence(game=game)
+                    game = discord.Game(name=players + " / " + maxPlayers)
+                    await client.change_presence(status=discord.Status.idle, activity=game)
+
             await asyncio.sleep(updateInterval)
 
     @client.event
