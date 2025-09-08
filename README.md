@@ -1,3 +1,7 @@
+## 📦 Repository Archived
+
+This repository has been archived and is no longer maintained.
+
 # Python Rust discord bot that displayes online players
 
 ![Discord-bot](https://i.gyazo.com/23a3f95b758a146efa7d4a3dfd5f3999.png)
